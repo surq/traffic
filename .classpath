@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/didi/work/ocdp/spark_compile/spark-assembly-1.6.2-hadoop2.6.0-cdh5.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/kafka-thrift.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/mysql-connector-java-5.1.27-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/kafka_2.10-0.8.2.1.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/kafka-clients-0.8.2.1.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/lz4-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/metrics-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/snappy-java-1.1.1.6.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/spark-streaming-kafka_2.10-1.6.3.jar"/>
+	<classpathentry kind="lib" path="/Users/didi/work/external_jars/spark-streaming_2.10_1.6.3/zkclient-0.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

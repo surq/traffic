@@ -1,0 +1,39 @@
+<configuration>
+	<Property>
+		<SparkMaster>HDFSwwer</SparkMaster>
+		<AppName>JunctionCountFunction</AppName>
+		<MapmatchDir>/user/bigdata-dp/map_match_result/v3/2016/12/14/*/biztype258_role1/part-*
+		</MapmatchDir>
+		<describe>经纬度方圆多少米</describe>
+		<Area>0.003</Area>
+		<describe>统计周期(单位分钟)</describe>
+		<Duration>5</Duration>
+		<CountCarDir>/user/its_bi/changping/junctionCount/collectdata
+		</CountCarDir>
+		<CountUserDir>/user/its_bi/changping/junctionCount/collectdataHour
+		</CountUserDir>
+		<JunctionList>116.222124,40.221177@116.226947,40.220239@116.23354,40.220526@116.2398,40.220788@116.244488,40.220972@116.250529,40.221238
+		</JunctionList>
+	</Property>
+
+	<BaseProperty>
+		<HDFSName>fs.defaultFS</HDFSName>
+		<ClusterUrl>hdfs://10.93.77.15:8020</ClusterUrl>
+	</BaseProperty>
+	<OrderGPSProperty>
+		<describe>订单相关</describe>
+		<HiveUser>its</HiveUser>
+		<Select>driver_id,begin_charge_time,finish_time</Select>
+		<Where>city_id=1 and driver_id!=0 and begin_charge_time &gt;
+			'2016-12-00' and finish_time &lt; '2016-12-22 00:00:00'</Where>
+		<OrderTable>dw_v_order_base_new</OrderTable>
+		<describe>GPS轨迹相关</describe>
+		<ChangpingGPSDir>/user/its_bi/data/polygon_all/gulf/2016/12
+		</ChangpingGPSDir>
+		<AreaID>3</AreaID>
+		<ResultDir>/user/its_bi/changping/changpingorderGPShour</ResultDir>
+		<describe>输出结果合并成一个文件</describe>
+		<ResutlUnionPathionFlg>true</ResutlUnionPathionFlg>
+		<AppName>ChangpingOrderGps</AppName>
+	</OrderGPSProperty>
+</configuration>

@@ -1,0 +1,16 @@
+<configuration>
+        <PolygonStreaming>
+                <describe>-------订单数据的GPS轨迹抽取功能----------</describe>
+                <userConfDir>/user/its_bi/polygonUserConf.conf</userConfDir>
+                <AppName>PolygonStreaming</AppName>
+                <interval>60</interval>
+                <kafka>
+                        <directAPI>false</directAPI>
+                        <receverNum>20</receverNum>
+                        <topic>xinsi_traffic_map_match_dispatch_evaluate</topic>
+                        <brokerList>bigdata-swan-ser20.gz01:9092,bigdata-swan-ser21.gz01:9092,bigdata-swan-ser22.gz01:9092</brokerList>
+                        <zookeeper>bigdata-swan-ser104.gz01:2181,bigdata-swan-ser106.gz01:2181,bigdata-swan-ser103.gz01:2181/online</zookeeper>
+                        <group>its</group>
+                </kafka>
+        </PolygonStreaming>
+</configuration>

@@ -1,0 +1,33 @@
+<configuration>
+	<JiNankakouLuKouCount>
+		<AppName>JiNankakouLuKouCount</AppName>
+		<describe>统计过车量的频率,每5分钟统计一次,单位为分钟</describe>
+		<countInterval>5</countInterval>
+		<cityId>12</cityId>
+		<kakouItem>车辆md5,品牌,车身颜色,车牌颜色,卡口编号,通过时间,瞬时速度,车道编号,行车方向,车辆状态,通过地点,抓拍方向
+		</kakouItem>
+		<inPut>
+			<kakouDescribeList>经十路与环山路路口,经十路与山大路路口,经十路与历山路路口,经十路与千佛山路路口,经十路与青年东路路口,经十路与山师东路路口
+			</kakouDescribeList>
+			<describe>路口间的ID用";"隔开，同路口的ID用“,”隔开</describe>
+			<kakouIdList>3701022149;3701022106;3701022107;3701022108;3701022109;3701022148
+			</kakouIdList>
+			<describe>batchPattern=batch|day
+				batch：可用正则/user/its_bi/etlkakou/2017/0[2-3]/[1-9]/0[0-8],day:从参数获取yyyyMMdd跟kakouPath结合
+			</describe>
+			<batchPattern>day</batchPattern>
+			<hdfs>
+				<kakouPath>/user/its_bi/etlkakou</kakouPath>
+			</hdfs>
+		</inPut>
+		<outPut>
+			<mysql>
+				<out_url>jdbc:mysql://100.90.164.31:3306/its?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false
+				</out_url>
+				<out_username>root</out_username>
+				<out_password>123456</out_password>
+				<out_table>kakou_guocheliang</out_table>
+			</mysql>
+		</outPut>
+	</JiNankakouLuKouCount>
+</configuration>

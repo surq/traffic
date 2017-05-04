@@ -1,0 +1,18 @@
+<configuration>
+	<dataProperties>
+		<data>
+			<dataName>testData1</dataName>
+			<outPutPath>/Users/didi/work/components/logdata/createData/oput1</outPutPath>
+			<outPutFileDel_flg>false</outPutFileDel_flg>
+			<lineCount>100</lineCount>
+			<interval>2000</interval>
+		</data>
+		<data>
+			<dataName>testData2</dataName>
+			<outPutPath>/Users/didi/work/components/logdata/createData/oput2</outPutPath>
+			<outPutFileDel_flg>false</outPutFileDel_flg>
+				<lineCount>100</lineCount>
+			<interval>1000</interval>
+		</data>
+	</dataProperties>
+</configuration>

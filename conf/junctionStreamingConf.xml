@@ -1,0 +1,35 @@
+<configuration>
+	<JunctionStreaming>
+		<AppName>JunctionStreaming</AppName>
+		<interval>300</interval>
+		<inPut>
+			<durationValue>1800</durationValue>
+			<junctionList>5138187,5138189,5138193,5138251,5141526,5151332
+			</junctionList>
+			<hdfs>
+				<flowConfPath>/user/its_bi/flow_data/flow/20170308/flow-m-00000
+				</flowConfPath>
+			</hdfs>
+			<kafka>
+				<topic>jinan_order_gps_task1</topic>
+				<zookeeper>bigdata-swan-ser104.gz01:2181,bigdata-swan-ser106.gz01:2181,bigdata-swan-ser103.gz01:2181/online
+				</zookeeper>
+				<group>its</group>
+			</kafka>
+			<mysql>
+				<url>jdbc:mysql://10.231.158.64:4055/gulfstream</url>
+				<username>ol_gs_core</username>
+				<password>OlGsCoRe@0519</password>
+				<in_table>g_order_0531</in_table>
+			</mysql>
+		</inPut>
+		<outPut>
+			<mysql>
+				<out_url>jdbc:mysql://100.90.164.31:3306/its?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false</out_url>
+				<out_username>flow</out_username>
+				<out_password>123456</out_password>
+				<out_table>flow_duration</out_table>
+			</mysql>
+		</outPut>
+	</JunctionStreaming>
+</configuration>
